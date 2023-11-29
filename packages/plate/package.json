@@ -28,7 +28,8 @@
       "import": "./dist/index.mjs",
       "module": "./dist/index.mjs",
       "require": "./dist/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
     "build": "yarn p:build",
@@ -79,7 +80,8 @@
     "@udecode/plate-suggestion": "25.0.1",
     "@udecode/plate-tabbable": "25.0.1",
     "@udecode/plate-table": "26.0.3",
-    "@udecode/plate-trailing-block": "25.0.1"
+    "@udecode/plate-trailing-block": "25.0.1",
+    "@udecode/plate-demo1": "26.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

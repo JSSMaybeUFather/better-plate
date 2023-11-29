@@ -1,0 +1,12 @@
+{
+  "name": "demo1",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "name": "demo1.tsx",
+      "content": "import React from 'react';\nimport { PlateElement, PlateElementProps, Value } from '@udecode/plate-common';\n\n\nimport { cn } from '@/lib/utils';\n\nconst Demo1Element = React.forwardRef<\n    React.ElementRef<typeof PlateElement>,\n    PlateElementProps<Value, any>\n>(({ className, children, ...props }, ref) => {\n    return (\n        <PlateElement\n            asChild\n            ref={ref}\n            className={cn(\n                'font-medium text-primary underline decoration-primary underline-offset-4',\n                className\n            )}\n            {...(props as any)}\n        >\n\n            <strong>{children} <span>demo1</span></strong>\n        </PlateElement>\n    );\n});\nDemo1Element.displayName = 'Demo1Element';\n\nexport { Demo1Element };"
+    }
+  ],
+  "type": "components:plate-ui"
+}

@@ -66,6 +66,7 @@ const categories = [
       customizerPlugins.table,
       customizerPlugins.todoli,
       customizerPlugins.trailingblock,
+      customizerPlugins.demo1
     ],
   },
 ];
@@ -122,8 +123,8 @@ export function SettingsCombobox() {
                           valuePlugins.forEach((pluginKey) => {
                             const deps = (
                               customizerItems[pluginKey] as
-                                | SettingPlugin
-                                | undefined
+                              | SettingPlugin
+                              | undefined
                             )?.dependencies;
 
                             deps?.forEach((dep) => {

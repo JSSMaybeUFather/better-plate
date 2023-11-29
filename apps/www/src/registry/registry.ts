@@ -201,6 +201,13 @@ const ui: Registry = [
     files: ['plate-ui/cursor-overlay.tsx'],
   },
   {
+    name: 'demo1',
+    type: 'components:plate-ui',
+    dependencies: [],
+    registryDependencies: [],
+    files: ['plate-ui/demo1.tsx'],
+  },
+  {
     name: 'dialog',
     type: 'components:plate-ui',
     dependencies: ['@radix-ui/react-dialog'],
@@ -712,6 +719,7 @@ const example: Registry = [
     external: true,
     files: ['types/plate-types.ts'],
   },
+
 ];
 
 export const registry: Registry = [...ui, ...example];

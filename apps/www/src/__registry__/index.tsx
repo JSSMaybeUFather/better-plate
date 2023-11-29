@@ -340,6 +340,13 @@ export const Index: Record<string, any> = {
       files: ['registry/default/plate-ui/cursor-overlay.tsx'],
       component: React.lazy(() => import('@/registry/default/plate-ui/cursor-overlay')),
     },
+    'demo1': {
+      name: 'demo1',
+      type: 'components:plate-ui',
+      registryDependencies: [],
+      files: ['registry/default/plate-ui/demo1.tsx'],
+      component: React.lazy(() => import('@/registry/default/plate-ui/demo1')),
+    },
     'dialog': {
       name: 'dialog',
       type: 'components:plate-ui',

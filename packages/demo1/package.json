@@ -1,13 +1,13 @@
 {
-  "name": "@udecode/plate-core",
-  "version": "25.0.1",
-  "description": "The core architecture of Plate – a plugin system for slate",
+  "name": "@udecode/plate-demo1",
+  "version": "26.0.3",
+  "description": "demo1",
   "license": "MIT",
   "homepage": "https://platejs.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/udecode/plate.git",
-    "directory": "packages/core"
+    "directory": "packages/demo1"
   },
   "bugs": {
     "url": "https://github.com/udecode/plate/issues"
@@ -25,14 +25,12 @@
       "import": "./dist/index.mjs",
       "module": "./dist/index.mjs",
       "require": "./dist/index.js"
-    },
-    "./package.json": "./package.json"
+    }
   },
   "scripts": {
     "build": "yarn p:build",
     "build:watch": "yarn p:build:watch",
     "brl": "yarn p:brl",
-    "clean": "yarn p:clean",
     "lint": "yarn p:lint",
     "lint:fix": "yarn p:lint:fix",
     "test": "yarn p:test",
@@ -40,19 +38,7 @@
     "typecheck": "yarn p:typecheck"
   },
   "dependencies": {
-    "@udecode/slate": "25.0.0",
-    "@udecode/slate-react": "25.0.0",
-    "@udecode/slate-utils": "25.0.0",
-    "@udecode/utils": "24.3.0",
-    "@udecode/zustood": "^1.1.3",
-    "clsx": "^1.2.1",
-    "is-hotkey": "^0.2.0",
-    "jotai": "1.7.2",
-    "lodash": "^4.17.21",
-    "nanoid": "^3.3.6",
-    "react-hotkeys-hook": "^4.4.1",
-    "use-deep-compare": "^1.1.0",
-    "zustand": "^3.7.2"
+    "@udecode/plate-common": "25.0.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -63,15 +49,9 @@
     "slate-react": ">=0.99.0"
   },
   "keywords": [
-    "contentEditable",
-    "editor",
-    "framework",
-    "html",
     "plate",
     "plugin",
-    "rich text",
-    "slate",
-    "wysiwyg"
+    "slate"
   ],
   "publishConfig": {
     "access": "public"

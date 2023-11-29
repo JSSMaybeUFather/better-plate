@@ -102,6 +102,7 @@ import { Editor } from '@/registry/default/plate-ui/editor';
 import { FixedToolbar } from '@/registry/default/plate-ui/fixed-toolbar';
 import { FloatingToolbar } from '@/registry/default/plate-ui/floating-toolbar';
 import { MentionCombobox } from '@/registry/default/plate-ui/mention-combobox';
+import { createDemo1Plugin } from '@udecode/plate-demo1';
 
 export const usePlaygroundPlugins = ({
   id,
@@ -251,6 +252,7 @@ export const usePlaygroundPlugins = ({
           createDeserializeDocxPlugin({ enabled: !!enabled.deserializeDocx }),
           createDeserializeMdPlugin({ enabled: !!enabled.deserializeMd }),
           createJuicePlugin({ enabled: !!enabled.juice }),
+          createDemo1Plugin(),
         ],
         {
           components,
@@ -300,13 +302,17 @@ export default function PlaygroundDemo({ id }: { id?: ValueId }) {
       }
     ),
   });
-
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="relative">
         <Plate
           key={key}
-          initialValue={initialValue}
+          initialValue={[{
+            children: [
+              { text: '' }
+            ],
+            type: 'demo1'
+          }]}
           plugins={plugins}
           normalizeInitialValue
         >
@@ -327,7 +333,7 @@ export default function PlaygroundDemo({ id }: { id?: ValueId }) {
                   '[&_.slate-start-area-top]:!h-4',
                   '[&_.slate-start-area-left]:!w-3 [&_.slate-start-area-right]:!w-3',
                   !id &&
-                    'md:[&_.slate-start-area-left]:!w-[64px] md:[&_.slate-start-area-right]:!w-[64px]'
+                  'md:[&_.slate-start-area-left]:!w-[64px] md:[&_.slate-start-area-right]:!w-[64px]'
                 )}
               >
                 <Editor

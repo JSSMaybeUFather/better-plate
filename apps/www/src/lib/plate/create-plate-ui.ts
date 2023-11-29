@@ -78,7 +78,8 @@ import { TableElement } from '@/registry/default/plate-ui/table-element';
 import { TableRowElement } from '@/registry/default/plate-ui/table-row-element';
 import { TodoListElement } from '@/registry/default/plate-ui/todo-list-element';
 import { withDraggables } from '@/registry/default/plate-ui/with-draggables';
-
+import {ELEMENT_DEMO1,createDemo1Plugin} from '@udecode/plate-demo1'
+import { Demo1Element } from '@/registry/default/plate-ui/demo1';
 export const createPlateUI = (
   overrideByKey?: Partial<Record<string, PlatePluginComponent>>,
   {
@@ -124,6 +125,7 @@ export const createPlateUI = (
     [MARK_SUPERSCRIPT]: withProps(PlateLeaf, { as: 'sup' }),
     [MARK_UNDERLINE]: withProps(PlateLeaf, { as: 'u' }),
     [MARK_COMMENT]: CommentLeaf,
+    [ELEMENT_DEMO1]:Demo1Element
   };
 
   if (overrideByKey) {

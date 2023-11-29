@@ -275,6 +275,15 @@
     "type": "components:plate-ui"
   },
   {
+    "name": "demo1",
+    "dependencies": [],
+    "registryDependencies": [],
+    "files": [
+      "plate-ui/demo1.tsx"
+    ],
+    "type": "components:plate-ui"
+  },
+  {
     "name": "dialog",
     "dependencies": [
       "@radix-ui/react-dialog"

@@ -7,6 +7,7 @@ const silent = false;
 
 const PACKAGE_ROOT_PATH = process.cwd();
 const INPUT_FILE_PATH = path.join(PACKAGE_ROOT_PATH, 'src/index.ts');
+console.log(process.cwd());
 const INPUT_FILE = fs.existsSync(INPUT_FILE_PATH)
   ? INPUT_FILE_PATH
   : path.join(PACKAGE_ROOT_PATH, 'src/index.tsx');

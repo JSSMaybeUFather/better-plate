@@ -41,6 +41,7 @@ import {
 import { KEY_CAPTION } from '@udecode/plate-caption';
 import { KEY_COMBOBOX } from '@udecode/plate-combobox';
 import { MARK_COMMENT } from '@udecode/plate-comments';
+import { ELEMENT_DEMO1 } from '@udecode/plate-demo1';
 import { KEY_DND } from '@udecode/plate-dnd';
 import { KEY_EMOJI } from '@udecode/plate-emoji';
 import { ELEMENT_EXCALIDRAW } from '@udecode/plate-excalidraw';
@@ -338,4 +339,11 @@ export const customizerPlugins = {
     route: '/docs/trailing-block',
     plugins: [KEY_TRAILING_BLOCK],
   },
+  demo1:{
+    id:'demo1',
+    label:'demo1',
+    value:'demo1',
+    route: '/docs/todo-list',
+    plugins:[ELEMENT_DEMO1]
+  }
 };
